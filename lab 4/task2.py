@@ -1,5 +1,5 @@
 def get_count_char(str_):
-    str_ = "".join(str_.lower().split(" "))
+    str_ = str_.lower()
     d = {}
 
     for c in str_:
@@ -12,12 +12,11 @@ def get_count_char(str_):
 
 
 def percent(d):
-    sum_d=0
+    sum_d = 0
     for c in d:
         sum_d += d[c]
     for c in d:
         d[c] = round(d[c] / sum_d * 100, 1)
-    sum_d
     return d
 
 main_str = """
@@ -27,4 +26,3 @@ main_str = """
 """
 print(get_count_char(main_str))
 print(percent(get_count_char(main_str)))
-
