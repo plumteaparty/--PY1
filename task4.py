@@ -4,10 +4,6 @@ INPUT_FILE = "input.csv"
 
 
 def csv_to_list_dict(filename, delimiter=',', new_line='\n'):
-    if delimiter is None:
-        delimiter = ","
-    if new_line is None:
-        new_line = "\n"
     with open(filename) as f:
         table = []
         for i, l in enumerate(f):
